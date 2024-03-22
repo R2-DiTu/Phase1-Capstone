@@ -1,0 +1,67 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../app.component.css">
+</head>
+-->
+<body>
+    <h3>Create Account</h3>    
+    <form id="registerForm" class="body" method="POST" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="fullName">Name (first and last):</label>
+            <input type="text" name="fullName" id="fullName" [(ngModel)]="fullName">
+        </div>    
+        <div>
+            <br>
+            <label for="pronouns">Preferred Pronouns:</label>
+            <br>
+            <select name="pronouns" id="pronouns">
+                <option value="default">Select one</option>
+                <option value="he/him">he/him</option>
+                <option value="she/her">she/her</option>
+                <option value="they/them">they/them</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div>
+            <br>
+            <label for="email">Email Address:</label>
+            <br>
+            <input type="text" name="email" id="email" [(ngModel)]="email">
+        </div>
+        <br>
+        Opt-in for our Newsletter?
+        <input type="checkbox">
+    <h4>Create Login Info:</h4>
+        <div class="input-control">
+            <label for="username">Username:</label>
+            <br>
+            <input type="text" required name="username" id="username" [(ngModel)]="username">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <br>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" name="password" id="password" placeholder="minimum 8 characters" required>
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <br>
+            <label for="passwordRetype">Re-type Password:</label>
+            <br>
+            <input type="password" name="passwordRetype" id="passwordRetype">
+            <div class="error"></div>
+        </div>
+        <br>
+        <input type="submit" value="SUBMIT">
+        <!--<button type="submit" value="Submit" class="submitButton">SUBMIT</button>-->
+        <br>
+        <br>
+        <p>Already a member? <a href="./index.html">Login here.</a></p>
+    </form>
+</body>
+<!--</html>-->

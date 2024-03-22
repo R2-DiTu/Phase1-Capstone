@@ -1,0 +1,89 @@
+<!--Create a SERVICE for this page to input scheduled meetings-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AA Architecture - Client Meetings</title>
+
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>Meetings</li>
+            <li><a href="./register.html">Register</a></li>
+        </ul>
+<br><br>
+    <!--    <h3>Scheduled Meetings</h3>
+         <table>
+            <tr>
+                <th>NAME</th>
+                <th>LOCATION</th>
+                <th>DATE</th>
+                <th>TIME</th>
+            </tr>
+            <tr>
+                <td>Joe Smith</td>
+                <td>123 Alpha St.</td>
+                <td>12/01</td>
+                <td>3:00PM</td>
+            </tr>
+            <tr>
+                <td>Jane Sue</td>
+                <td>789 Charlie Rd.</td>
+                <td>10/01</td>
+                <td>2:00PM</td>                
+            </tr>
+            <tr>
+                <td>John Schmoe</td>
+                <td>456 Beta Ave.</td>
+                <td>10/10</td>
+                <td>11:30AM</td>
+            </tr>
+            <tr>
+                <td>Mary Doe</td>
+                <td>1011 Delta Dr.</td>
+                <td>01/03</td>
+                <td>1:30PM</td>
+            </tr>
+        </table>-->
+    <form onsubmit="return validate()" class="body" name="meetingsForm" method="POST">
+        <div>
+            <h4>Schedule an appointment now:</h4>
+            <label for="companyName">Company Name</label>
+            <br>
+            <input type="text" name="companyName" id="companyName" required>
+            <br>
+            <br>
+        </div>
+        <div>
+            <label for="companyPhone">Company Phone Number</label>
+            <br>
+            <input type="tel" name="companyPhone" id="companyPhone" required>
+        </div>
+        <div>
+            <br>
+            <label for="topic">Meeting Topic:</label>
+            <br>
+            <select name="topic" id="topic">
+                <option value="default">Select one</option>
+                <option value="location">Location</option>
+                <option value="accounting">Accounting</option>
+                <option value="construction">Construction</option>
+                <option value="permits">Permits</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="schedule">
+            <label for="schedule">Select Date: </label>
+            <input type="datetime-local" name="schedule" id="schedule">
+            <br><br>
+            <button type="submit" value="Submit" class="submitButton" onclick="validate()">SUBMIT</button>
+        </div>
+    </form>
+    
+    
+    </body>
+</html>
